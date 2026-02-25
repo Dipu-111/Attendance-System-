@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:intern_project_1/routes/AppPages.dart';
 import 'package:intern_project_1/views/attendance_view.dart';
-import 'package:intern_project_1/views/visit_timeline_view.dart';
+
 
 void main() {
   runApp(const MyApp());

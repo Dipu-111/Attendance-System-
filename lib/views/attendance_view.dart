@@ -22,6 +22,10 @@ class AttendanceView extends StatelessWidget {
         ),
 
         backgroundColor: AppColors.appBarColor,
+        actions: [
+          IconButton(onPressed: () {}, icon: Icon(Icons.arrow_forward)),
+        ],
+        
       ),
       body: SingleChildScrollView(
         child: Padding(
