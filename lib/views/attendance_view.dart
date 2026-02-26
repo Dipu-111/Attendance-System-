@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:intern_project_1/provider/navigation_provider.dart';
 import 'package:intern_project_1/utils/colors.dart';
+import 'package:provider/provider.dart';
 
 class AttendanceView extends StatelessWidget {
   const AttendanceView({super.key});
@@ -23,9 +25,13 @@ class AttendanceView extends StatelessWidget {
 
         backgroundColor: AppColors.appBarColor,
         actions: [
-          IconButton(onPressed: () {}, icon: Icon(Icons.arrow_forward)),
+          IconButton(
+            onPressed: () {
+              context.read<NavigationProvider>().navigateToPage('/timeline');
+            },
+            icon: Icon(Icons.arrow_forward),
+          ),
         ],
-        
       ),
       body: SingleChildScrollView(
         child: Padding(

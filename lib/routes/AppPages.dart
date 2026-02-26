@@ -1,11 +1,18 @@
-import 'package:get/get.dart';
-import 'package:intern_project_1/routes/AppRoutes.dart';
+
+import 'package:flutter/material.dart';
+import 'package:intern_project_1/views/Timeline.dart';
 import 'package:intern_project_1/views/attendance_view.dart';
+import 'package:intern_project_1/views/home_view.dart';
+import 'package:intern_project_1/views/visit_timeline_monthly_view.dart';
+import 'package:intern_project_1/views/visit_timeline_view.dart';
 
 class AppPages {
-  static final pages = {
-    GetPage(name: AppRoutes.attendanceScreen, page: () => const AttendanceView()),
-   
-    
+  static Map<String, WidgetBuilder>  routes = {
+    "/":(context)=> HomeView(),
+    "/attendance":(context)=> AttendanceView(),
+    "/timeline": (context)=>VisitTimelineView(),
+    "/timelineMonthly": (context)=> VisitTimelineMonthlyView(),
+    "/timelineview":(context)=> TimelineView()
   };
+  
 }
